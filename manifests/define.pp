@@ -13,6 +13,8 @@ define newsyslog (
 
   include newsyslog
 
+  validate_string($logfile)
+
   file { "$site_dir/$title":
     ensure  => file,
     content => 'newsyslog/newsyslog.conf.erb',
