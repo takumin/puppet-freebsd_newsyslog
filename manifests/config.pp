@@ -4,8 +4,8 @@
 #
 class freebsd_newsyslog::config {
   file {[
-    "$system_dir",
-    "$site_dir",
+    "$::freebsd_newsyslog::system_dir",
+    "$::freebsd_newsyslog::site_dir",
   ]:
     ensure  => directory,
     owner   => 'root',
